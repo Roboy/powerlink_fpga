@@ -1,0 +1,904 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f400ad6a56c, pid=3592, tid=139911625262848
+#
+# JRE version: 6.0_23-b05
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (19.0-b09 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [ld-linux-x86-64.so.2+0xc56c]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f4000275000):  JavaThread "Tcl Isolation Thread" daemon [_thread_in_native, id=3646, stack(0x00007f3fb6a94000,0x00007f3fb6b95000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000038
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f3f82717148, RCX=0x00007f3f82985000, RDX=0x0000000000000006
+RSP=0x00007f3fb6b8fd10, RBP=0x00007f3fb6b8fe30, RSI=0x0000000000000000, RDI=0x00007f3f82716350
+R8 =0x0000000000000030, R9 =0x0000000000000004, R10=0x00007f3f82984ef8, R11=0x00007f3f82716000
+R12=0x00007f3fa826a100, R13=0x0000000200000006, R14=0x0000000000000006, R15=0x00007f3f82716380
+RIP=0x00007f400ad6a56c, EFL=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Register to memory mapping:
+
+RAX=0x0000000000000000
+0x0000000000000000 is pointing to unknown location
+
+RBX=0x00007f3f82717148
+0x00007f3f82717148: <offset 0x1148> in /lib/x86_64-linux-gnu/libpcre.so.3 at 0x00007f3f82716000
+
+RCX=0x00007f3f82985000
+0x00007f3f82985000: <offset 0x26f000> in /lib/x86_64-linux-gnu/libpcre.so.3 at 0x00007f3f82716000
+
+RDX=0x0000000000000006
+0x0000000000000006 is pointing to unknown location
+
+RSP=0x00007f3fb6b8fd10
+0x00007f3fb6b8fd10 is pointing into the stack for thread: 0x00007f4000275000
+"Tcl Isolation Thread" daemon prio=10 tid=0x00007f4000275000 nid=0xe3e runnable [0x00007f3fb6b93000]
+   java.lang.Thread.State: RUNNABLE
+
+RBP=0x00007f3fb6b8fe30
+0x00007f3fb6b8fe30 is pointing into the stack for thread: 0x00007f4000275000
+"Tcl Isolation Thread" daemon prio=10 tid=0x00007f4000275000 nid=0xe3e runnable [0x00007f3fb6b93000]
+   java.lang.Thread.State: RUNNABLE
+
+RSI=0x0000000000000000
+0x0000000000000000 is pointing to unknown location
+
+RDI=0x00007f3f82716350
+0x00007f3f82716350: <offset 0x350> in /lib/x86_64-linux-gnu/libpcre.so.3 at 0x00007f3f82716000
+
+R8 =0x0000000000000030
+0x0000000000000030 is pointing to unknown location
+
+R9 =0x0000000000000004
+0x0000000000000004 is pointing to unknown location
+
+R10=0x00007f3f82984ef8
+0x00007f3f82984ef8: <offset 0x26eef8> in /lib/x86_64-linux-gnu/libpcre.so.3 at 0x00007f3f82716000
+
+R11=0x00007f3f82716000
+0x00007f3f82716000: <offset 0> in /lib/x86_64-linux-gnu/libpcre.so.3 at 0x00007f3f82716000
+
+R12=0x00007f3fa826a100
+0x00007f3fa826a100 is pointing to unknown location
+
+R13=0x0000000200000006
+0x0000000200000006 is pointing to unknown location
+
+R14=0x0000000000000006
+0x0000000000000006 is pointing to unknown location
+
+R15=0x00007f3f82716380
+0x00007f3f82716380: <offset 0x380> in /lib/x86_64-linux-gnu/libpcre.so.3 at 0x00007f3f82716000
+
+
+Top of Stack: (sp=0x00007f3fb6b8fd10)
+0x00007f3fb6b8fd10:   00007f3fb6b8fcd0 00007f3fb6b8fda0
+0x00007f3fb6b8fd20:   00007f3fb6b8fda8 00007f3fb6b8fdb8
+0x00007f3fb6b8fd30:   00007f3fb6b8fe00 0000000000000000
+0x00007f3fb6b8fd40:   0000000000000000 00007f3fb6b8fdb0
+0x00007f3fb6b8fd50:   0000000000000000 0000000000000000
+0x00007f3fb6b8fd60:   0000000000000000 00007f3f82716980
+0x00007f3fb6b8fd70:   00007f3fa826d580 0000000000000000
+0x00007f3fb6b8fd80:   00007f3fb6b8fdc0 00007f3f82716d8c
+0x00007f3fb6b8fd90:   00007f3f82716350 00007f3f82717448
+0x00007f3fb6b8fda0:   0000000000000030 0000000000000000
+0x00007f3fb6b8fdb0:   00007f3f82716380 00007f3ff8879270
+0x00007f3fb6b8fdc0:   00007f3f82716e90 00000000000005b8
+0x00007f3fb6b8fdd0:   000000000000001d 0000000000000000
+0x00007f3fb6b8fde0:   0000000000000000 0000000000000000
+0x00007f3fb6b8fdf0:   0000000000000000 0000000000000000
+0x00007f3fb6b8fe00:   00007f3fb6b8ff30 0000000000000008
+0x00007f3fb6b8fe10:   00007f3fb6b900c0 0000000000000001
+0x00007f3fb6b8fe20:   0000000000000001 00007f3fb6b8fe40
+0x00007f3fb6b8fe30:   00007f3fb6b8ff30 00007f400ad73681
+0x00007f3fb6b8fe40:   00007f3fa8277f60 00007f3fa8277600
+0x00007f3fb6b8fe50:   00007f3fa82767f0 00007f3fa8274bd0
+0x00007f3fb6b8fe60:   00007f3fa8272ea0 00007f3fa82759e0
+0x00007f3fb6b8fe70:   00007f3fa82788f0 00007f3fa826ac90
+0x00007f3fb6b8fe80:   00007f3fa826a100 00007f400ad7347c
+0x00007f3fb6b8fe90:   0000000000000000 00007f3fb6b8fe40
+0x00007f3fb6b8fea0:   00007f3fb6b8fe90 0000000000000001
+0x00007f3fb6b8feb0:   8000110100000000 00007f400af85140
+0x00007f3fb6b8fec0:   00007f3fb6b900c0 00007f3ff8879270
+0x00007f3fb6b8fed0:   0000000000000008 0000000000000001
+0x00007f3fb6b8fee0:   656c2f656d6f0001 0000000000000009
+0x00007f3fb6b8fef0:   00007f3fb6b8fe2e 0000000000000008
+0x00007f3fb6b8ff00:   3678756e696c2f73 0000000000000000 
+
+Instructions: (pc=0x00007f400ad6a56c)
+0x00007f400ad6a55c:   89 8c 24 00 04 00 00 4c 8d 04 d6 4d 85 c0 74 0f
+0x00007f400ad6a56c:   41 8b 40 08 85 c0 b8 00 00 00 00 4c 0f 44 c0 41 
+
+Stack: [0x00007f3fb6a94000,0x00007f3fb6b95000],  sp=0x00007f3fb6b8fd10,  free space=1007k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ld-linux-x86-64.so.2+0xc56c]
+C  [ld-linux-x86-64.so.2+0x15681]
+C  [ld-linux-x86-64.so.2+0x10394]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.altera.tcl.interpreter.NativeTclWrapper.eval0(Ljava/lang/String;)I+0
+j  com.altera.tcl.interpreter.NativeTclWrapper.eval(Ljava/lang/String;)Lcom/altera/tcl/interpreter/NativeTclWrapper$TclResult;+30
+j  com.altera.tcl.interpreter.NativeTCLInterpreter.evalScript(Ljava/lang/String;)V+32
+j  com.altera.tcl.interpreter.IsolatedTCLInterpreter.access$301(Lcom/altera/tcl/interpreter/IsolatedTCLInterpreter;Ljava/lang/String;)V+2
+j  com.altera.tcl.interpreter.IsolatedTCLInterpreter$5.run()V+8
+j  com.altera.tcl.interpreter.IsolatedTCLInterpreter$4.run()V+12
+j  com.altera.tcl.interpreter.IsolatedTCLInterpreter$StackedTask.run()V+15
+j  java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Ljava/lang/Runnable;)V+59
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+28
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f3f84012800 JavaThread "Thread-21" daemon [_thread_blocked, id=4515, stack(0x00007f3fa688a000,0x00007f3fa698b000)]
+  0x00007f3f8406d000 JavaThread "process reaper" daemon [_thread_in_native, id=4513, stack(0x00007f3fa6a8c000,0x00007f3fa6b8d000)]
+  0x00007f3f9c0af000 JavaThread "Thread-12" daemon [_thread_blocked, id=3798, stack(0x00007f3fb615d000,0x00007f3fb625e000)]
+  0x00007f3f9c158800 JavaThread "process reaper" daemon [_thread_in_native, id=3796, stack(0x00007f3ffc4ea000,0x00007f3ffc5eb000)]
+=>0x00007f4000275000 JavaThread "Tcl Isolation Thread" daemon [_thread_in_native, id=3646, stack(0x00007f3fb6a94000,0x00007f3fb6b95000)]
+  0x00007f3fa80b9000 JavaThread "TimerQueue" daemon [_thread_blocked, id=3631, stack(0x00007f3fb6b95000,0x00007f3fb6c96000)]
+  0x00007f3ff8a7a800 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=3621, stack(0x00007f3fb6da4000,0x00007f3fb6ea5000)]
+  0x00007f3ff8a79800 JavaThread "AWT-Shutdown" [_thread_blocked, id=3620, stack(0x00007f3ffc0bd000,0x00007f3ffc1be000)]
+  0x00007f3ff8875000 JavaThread "Command Watcher" daemon [_thread_blocked, id=3610, stack(0x00007f3ffc3e9000,0x00007f3ffc4ea000)]
+  0x00007f3ff8859800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=3608, stack(0x00007f3ffc5f4000,0x00007f3ffc6f5000)]
+  0x00007f3ff87f4000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3607, stack(0x00007f3ffc6f5000,0x00007f3ffc7f6000)]
+  0x00007f3ff80ef000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=3605, stack(0x00007f4004818000,0x00007f4004919000)]
+  0x00007f3ff80ec800 JavaThread "CompilerThread1" daemon [_thread_blocked, id=3604, stack(0x00007f4004919000,0x00007f4004a1a000)]
+  0x00007f3ff80e9800 JavaThread "CompilerThread0" daemon [_thread_blocked, id=3603, stack(0x00007f4004a1a000,0x00007f4004b1b000)]
+  0x00007f3ff80e7800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3602, stack(0x00007f4004b1b000,0x00007f4004c1c000)]
+  0x00007f3ff80cb800 JavaThread "Finalizer" daemon [_thread_blocked, id=3601, stack(0x00007f4004c1c000,0x00007f4004d1d000)]
+  0x00007f3ff80c9800 JavaThread "Reference Handler" daemon [_thread_blocked, id=3600, stack(0x00007f4004d1d000,0x00007f4004e1e000)]
+  0x00007f3ff800d800 JavaThread "main" [_thread_blocked, id=3594, stack(0x00007f3fffeff000,0x00007f4000000000)]
+
+Other Threads:
+  0x00007f3ff80c5800 VMThread [stack: 0x00007f4004e1e000,0x00007f4004f1f000] [id=3599]
+  0x00007f3ff80f9800 WatcherThread [stack: 0x00007f4004717000,0x00007f4004818000] [id=3606]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 1238400K, used 141784K [0x00000007b2000000, 0x00000007ffe10000, 0x0000000800000000)
+  eden space 1203008K, 11% used [0x00000007b2000000,0x00000007ba641d90,0x00000007fb6d0000)
+  from space 35392K, 12% used [0x00000007fdb80000,0x00000007fdfb4578,0x00000007ffe10000)
+  to   space 36480K, 0% used [0x00000007fb6d0000,0x00000007fb6d0000,0x00000007fda70000)
+ PSOldGen        total 534592K, used 465388K [0x0000000716000000, 0x0000000736a10000, 0x00000007b2000000)
+  object space 534592K, 87% used [0x0000000716000000,0x000000073267b260,0x0000000736a10000)
+ PSPermGen       total 83968K, used 61921K [0x0000000710e00000, 0x0000000716000000, 0x0000000716000000)
+  object space 83968K, 73% used [0x0000000710e00000,0x0000000714a78628,0x0000000716000000)
+
+Dynamic libraries:
+40000000-40009000 r-xp 00000000 08:13 28970907                           /home/letrend/altera/14.0/quartus/linux64/jre64/bin/java
+40108000-4010a000 rwxp 00008000 08:13 28970907                           /home/letrend/altera/14.0/quartus/linux64/jre64/bin/java
+40cda000-40d1d000 rwxp 00000000 00:00 0                                  [heap]
+710e00000-716000000 rwxp 00000000 00:00 0 
+716000000-736a10000 rwxp 00000000 00:00 0 
+736a10000-7b2000000 rwxp 00000000 00:00 0 
+7b2000000-7ffe10000 rwxp 00000000 00:00 0 
+7ffe10000-800000000 ---p 00000000 00:00 0 
+7f3f78000000-7f3f780ab000 rwxp 00000000 00:00 0 
+7f3f780ab000-7f3f7c000000 ---p 00000000 00:00 0 
+7f3f7c000000-7f3f7c021000 rwxp 00000000 00:00 0 
+7f3f7c021000-7f3f80000000 ---p 00000000 00:00 0 
+7f3f80a36000-7f3f80a55000 r-xp 00000000 08:05 529031                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f3f80a55000-7f3f80c54000 ---p 0001f000 08:05 529031                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f3f80c54000-7f3f80c56000 rwxp 0001e000 08:05 529031                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f3f80c56000-7f3f80c58000 rwxp 00000000 00:00 0 
+7f3f81ec6000-7f3f81ecc000 r-xp 00000000 08:13 26632668                   /home/letrend/altera/14.0/quartus/linux64/libccl_put.so
+7f3f81ecc000-7f3f820cc000 ---p 00006000 08:13 26632668                   /home/letrend/altera/14.0/quartus/linux64/libccl_put.so
+7f3f820cc000-7f3f820cd000 rwxp 00006000 08:13 26632668                   /home/letrend/altera/14.0/quartus/linux64/libccl_put.so
+7f3f820ce000-7f3f820cf000 r-xp 00000000 08:13 26632660                   /home/letrend/altera/14.0/quartus/linux64/libccl_interface.so
+7f3f820cf000-7f3f822ce000 ---p 00001000 08:13 26632660                   /home/letrend/altera/14.0/quartus/linux64/libccl_interface.so
+7f3f822ce000-7f3f822cf000 rwxp 00000000 08:13 26632660                   /home/letrend/altera/14.0/quartus/linux64/libccl_interface.so
+7f3f822d6000-7f3f822f2000 r-xp 00000000 08:13 26631502                   /home/letrend/altera/14.0/quartus/linux64/libccl_big.so
+7f3f822f2000-7f3f824f1000 ---p 0001c000 08:13 26631502                   /home/letrend/altera/14.0/quartus/linux64/libccl_big.so
+7f3f824f1000-7f3f824f3000 rwxp 0001b000 08:13 26631502                   /home/letrend/altera/14.0/quartus/linux64/libccl_big.so
+7f3f824f6000-7f3f82510000 r-xp 00000000 08:13 26631261                   /home/letrend/altera/14.0/quartus/linux64/libdb_pdb.so
+7f3f82510000-7f3f82710000 ---p 0001a000 08:13 26631261                   /home/letrend/altera/14.0/quartus/linux64/libdb_pdb.so
+7f3f82710000-7f3f82712000 rwxp 0001a000 08:13 26631261                   /home/letrend/altera/14.0/quartus/linux64/libdb_pdb.so
+7f3f82716000-7f3f82784000 r-xp 00000000 08:05 529002                     /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f3f82784000-7f3f82984000 ---p 0006e000 08:05 529002                     /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f3f82984000-7f3f82986000 rwxp 0006e000 08:05 529002                     /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f3f829be000-7f3f829d3000 r-xp 00000000 08:13 26631715                   /home/letrend/altera/14.0/quartus/linux64/libccl_tst.so
+7f3f829d3000-7f3f82bd2000 ---p 00015000 08:13 26631715                   /home/letrend/altera/14.0/quartus/linux64/libccl_tst.so
+7f3f82bd2000-7f3f82bd4000 rwxp 00014000 08:13 26631715                   /home/letrend/altera/14.0/quartus/linux64/libccl_tst.so
+7f3f82bd6000-7f3f82c3e000 r-xp 00000000 08:13 26631698                   /home/letrend/altera/14.0/quartus/linux64/libccl_atcl.so
+7f3f82c3e000-7f3f82e3e000 ---p 00068000 08:13 26631698                   /home/letrend/altera/14.0/quartus/linux64/libccl_atcl.so
+7f3f82e3e000-7f3f82e43000 rwxp 00068000 08:13 26631698                   /home/letrend/altera/14.0/quartus/linux64/libccl_atcl.so
+7f3f82e43000-7f3f82e44000 rwxp 00000000 00:00 0 
+7f3f82e46000-7f3f82e62000 r-xp 00000000 08:13 26631702                   /home/letrend/altera/14.0/quartus/linux64/libccl_fstr.so
+7f3f82e62000-7f3f83061000 ---p 0001c000 08:13 26631702                   /home/letrend/altera/14.0/quartus/linux64/libccl_fstr.so
+7f3f83061000-7f3f83065000 rwxp 0001b000 08:13 26631702                   /home/letrend/altera/14.0/quartus/linux64/libccl_fstr.so
+7f3f83066000-7f3f830d1000 r-xp 00000000 08:13 26631353                   /home/letrend/altera/14.0/quartus/linux64/libccl_qtl.so
+7f3f830d1000-7f3f832d1000 ---p 0006b000 08:13 26631353                   /home/letrend/altera/14.0/quartus/linux64/libccl_qtl.so
+7f3f832d1000-7f3f832d6000 rwxp 0006b000 08:13 26631353                   /home/letrend/altera/14.0/quartus/linux64/libccl_qtl.so
+7f3f832d6000-7f3f83307000 r-xp 00000000 08:13 26631203                   /home/letrend/altera/14.0/quartus/linux64/libccl_cfg_ini.so
+7f3f83307000-7f3f83507000 ---p 00031000 08:13 26631203                   /home/letrend/altera/14.0/quartus/linux64/libccl_cfg_ini.so
+7f3f83507000-7f3f8350d000 rwxp 00031000 08:13 26631203                   /home/letrend/altera/14.0/quartus/linux64/libccl_cfg_ini.so
+7f3f8350e000-7f3f83528000 r-xp 00000000 08:13 26631296                   /home/letrend/altera/14.0/quartus/linux64/libccl_zlib.so
+7f3f83528000-7f3f83727000 ---p 0001a000 08:13 26631296                   /home/letrend/altera/14.0/quartus/linux64/libccl_zlib.so
+7f3f83727000-7f3f83728000 rwxp 00019000 08:13 26631296                   /home/letrend/altera/14.0/quartus/linux64/libccl_zlib.so
+7f3f8372e000-7f3f83735000 r-xp 00000000 08:05 1450610                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f3f83735000-7f3f83934000 ---p 00007000 08:05 1450610                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f3f83934000-7f3f83936000 rwxp 00006000 08:05 1450610                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f3f83936000-7f3f83ab6000 r-xp 00000000 08:05 1450727                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4800.1
+7f3f83ab6000-7f3f83cb6000 ---p 00180000 08:05 1450727                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4800.1
+7f3f83cb6000-7f3f83cbc000 rwxp 00180000 08:05 1450727                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4800.1
+7f3f83cbc000-7f3f83cbe000 rwxp 00000000 00:00 0 
+7f3f83de6000-7f3f83dff000 r-xp 00000000 08:05 529064                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f3f83dff000-7f3f83ffe000 ---p 00019000 08:05 529064                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f3f83ffe000-7f3f84000000 rwxp 00018000 08:05 529064                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f3f84000000-7f3f8455a000 rwxp 00000000 00:00 0 
+7f3f8455a000-7f3f88000000 ---p 00000000 00:00 0 
+7f3f88000000-7f3f88793000 rwxp 00000000 00:00 0 
+7f3f88793000-7f3f8c000000 ---p 00000000 00:00 0 
+7f3f8c000000-7f3f8fff1000 rwxp 00000000 00:00 0 
+7f3f8fff1000-7f3f90000000 ---p 00000000 00:00 0 
+7f3f90000000-7f3f91d06000 rwxp 00000000 00:00 0 
+7f3f91d06000-7f3f94000000 ---p 00000000 00:00 0 
+7f3f94000000-7f3f94021000 rwxp 00000000 00:00 0 
+7f3f94021000-7f3f98000000 ---p 00000000 00:00 0 
+7f3f98000000-7f3f9802c000 rwxp 00000000 00:00 0 
+7f3f9802c000-7f3f9c000000 ---p 00000000 00:00 0 
+7f3f9c000000-7f3f9c16a000 rwxp 00000000 00:00 0 
+7f3f9c16a000-7f3fa0000000 ---p 00000000 00:00 0 
+7f3fa0000000-7f3fa11d0000 rwxp 00000000 00:00 0 
+7f3fa11d0000-7f3fa4000000 ---p 00000000 00:00 0 
+7f3fa40e6000-7f3fa418b000 r-xp 00000000 08:13 26631578                   /home/letrend/altera/14.0/quartus/linux64/libccl_gen.so
+7f3fa418b000-7f3fa438a000 ---p 000a5000 08:13 26631578                   /home/letrend/altera/14.0/quartus/linux64/libccl_gen.so
+7f3fa438a000-7f3fa4390000 rwxp 000a4000 08:13 26631578                   /home/letrend/altera/14.0/quartus/linux64/libccl_gen.so
+7f3fa4390000-7f3fa4391000 rwxp 00000000 00:00 0 
+7f3fa4396000-7f3fa43b9000 r-xp 00000000 08:13 26631553                   /home/letrend/altera/14.0/quartus/linux64/libccl_fio.so
+7f3fa43b9000-7f3fa45b8000 ---p 00023000 08:13 26631553                   /home/letrend/altera/14.0/quartus/linux64/libccl_fio.so
+7f3fa45b8000-7f3fa45bd000 rwxp 00022000 08:13 26631553                   /home/letrend/altera/14.0/quartus/linux64/libccl_fio.so
+7f3fa45be000-7f3fa45d5000 r-xp 00000000 08:05 525688                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f3fa45d5000-7f3fa47d5000 ---p 00017000 08:05 525688                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f3fa47d5000-7f3fa47d7000 rwxp 00017000 08:05 525688                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f3fa47d7000-7f3fa47d9000 rwxp 00000000 00:00 0 
+7f3fa4926000-7f3fa4955000 r-xp 00000000 08:13 26631161                   /home/letrend/altera/14.0/quartus/linux64/libccl_mem_dyn.so
+7f3fa4955000-7f3fa4b54000 ---p 0002f000 08:13 26631161                   /home/letrend/altera/14.0/quartus/linux64/libccl_mem_dyn.so
+7f3fa4b54000-7f3fa4b57000 rwxp 0002e000 08:13 26631161                   /home/letrend/altera/14.0/quartus/linux64/libccl_mem_dyn.so
+7f3fa4b57000-7f3fa4c01000 rwxp 00000000 00:00 0 
+7f3fa4c06000-7f3fa4d15000 r-xp 00000000 08:05 528915                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4800.1
+7f3fa4d15000-7f3fa4f14000 ---p 0010f000 08:05 528915                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4800.1
+7f3fa4f14000-7f3fa4f16000 rwxp 0010e000 08:05 528915                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4800.1
+7f3fa4f16000-7f3fa4f17000 rwxp 00000000 00:00 0 
+7f3fa5006000-7f3fa502a000 r-xp 00000000 08:13 26631243                   /home/letrend/altera/14.0/quartus/linux64/libccl_err.so
+7f3fa502a000-7f3fa5229000 ---p 00024000 08:13 26631243                   /home/letrend/altera/14.0/quartus/linux64/libccl_err.so
+7f3fa5229000-7f3fa522b000 rwxp 00023000 08:13 26631243                   /home/letrend/altera/14.0/quartus/linux64/libccl_err.so
+7f3fa522b000-7f3fa523a000 rwxp 00000000 00:00 0 
+7f3fa523e000-7f3fa524e000 r-xp 00000000 08:13 26631415                   /home/letrend/altera/14.0/quartus/linux64/libccl_ver.so
+7f3fa524e000-7f3fa544e000 ---p 00010000 08:13 26631415                   /home/letrend/altera/14.0/quartus/linux64/libccl_ver.so
+7f3fa544e000-7f3fa544f000 rwxp 00010000 08:13 26631415                   /home/letrend/altera/14.0/quartus/linux64/libccl_ver.so
+7f3fa5456000-7f3fa54a8000 r-xp 00000000 08:05 1450765                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4800.1
+7f3fa54a8000-7f3fa56a7000 ---p 00052000 08:05 1450765                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4800.1
+7f3fa56a7000-7f3fa56a9000 rwxp 00051000 08:05 1450765                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4800.1
+7f3fa56b6000-7f3fa56b9000 r-xp 00000000 08:13 26632663                   /home/letrend/altera/14.0/quartus/linux64/libccl_clw.so
+7f3fa56b9000-7f3fa58b9000 ---p 00003000 08:13 26632663                   /home/letrend/altera/14.0/quartus/linux64/libccl_clw.so
+7f3fa58b9000-7f3fa58ba000 rwxp 00003000 08:13 26632663                   /home/letrend/altera/14.0/quartus/linux64/libccl_clw.so
+7f3fa58be000-7f3fa6111000 rwxs 00000000 00:05 16056342                   /SYSV00000000 (deleted)
+7f3fa6116000-7f3fa6119000 r-xp 00000000 08:05 1450741                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4800.1
+7f3fa6119000-7f3fa6318000 ---p 00003000 08:05 1450741                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4800.1
+7f3fa6318000-7f3fa631a000 rwxp 00002000 08:05 1450741                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4800.1
+7f3fa635e000-7f3fa6380000 r-xp 00000000 08:13 26631746                   /home/letrend/altera/14.0/quartus/linux64/liblzma.so.5
+7f3fa6380000-7f3fa647f000 ---p 00022000 08:13 26631746                   /home/letrend/altera/14.0/quartus/linux64/liblzma.so.5
+7f3fa647f000-7f3fa6480000 rwxp 00021000 08:13 26631746                   /home/letrend/altera/14.0/quartus/linux64/liblzma.so.5
+7f3fa6486000-7f3fa6489000 ---p 00000000 00:00 0 
+7f3fa6489000-7f3fa6587000 rwxp 00000000 00:00 0 
+7f3fa6587000-7f3fa658a000 ---p 00000000 00:00 0 
+7f3fa658a000-7f3fa6688000 rwxp 00000000 00:00 0 
+7f3fa6688000-7f3fa668b000 ---p 00000000 00:00 0 
+7f3fa668b000-7f3fa6789000 rwxp 00000000 00:00 0 
+7f3fa6789000-7f3fa678c000 ---p 00000000 00:00 0 
+7f3fa678c000-7f3fa688a000 rwxp 00000000 00:00 0 
+7f3fa688a000-7f3fa688d000 ---p 00000000 00:00 0 
+7f3fa688d000-7f3fa698b000 rwxp 00000000 00:00 0 
+7f3fa698b000-7f3fa698e000 ---p 00000000 00:00 0 
+7f3fa698e000-7f3fa6a8c000 rwxp 00000000 00:00 0 
+7f3fa6a8c000-7f3fa6a8f000 ---p 00000000 00:00 0 
+7f3fa6a8f000-7f3fa6b8d000 rwxp 00000000 00:00 0 
+7f3fa6b8d000-7f3fa6b8e000 ---p 00000000 00:00 0 
+7f3fa6b8e000-7f3fa758e000 rwxp 00000000 00:00 0 
+7f3fa758e000-7f3fa7dfb000 r-xp 00000000 08:13 26632856                   /home/letrend/altera/14.0/quartus/linux64/libicudata.so.34
+7f3fa7dfb000-7f3fa7ffb000 ---p 0086d000 08:13 26632856                   /home/letrend/altera/14.0/quartus/linux64/libicudata.so.34
+7f3fa7ffb000-7f3fa7ffc000 rwxp 0086d000 08:13 26632856                   /home/letrend/altera/14.0/quartus/linux64/libicudata.so.34
+7f3fa8000000-7f3fa83b1000 rwxp 00000000 00:00 0 
+7f3fa83b1000-7f3fac000000 ---p 00000000 00:00 0 
+7f3fac000000-7f3fac021000 rwxp 00000000 00:00 0 
+7f3fac021000-7f3fb0000000 ---p 00000000 00:00 0 
+7f3fb0000000-7f3fb0021000 rwxp 00000000 00:00 0 
+7f3fb0021000-7f3fb4000000 ---p 00000000 00:00 0 
+7f3fb40de000-7f3fb40fd000 r-xp 00000000 08:13 26631583                   /home/letrend/altera/14.0/quartus/linux64/libccl_thr.so
+7f3fb40fd000-7f3fb42fc000 ---p 0001f000 08:13 26631583                   /home/letrend/altera/14.0/quartus/linux64/libccl_thr.so
+7f3fb42fc000-7f3fb42fe000 rwxp 0001e000 08:13 26631583                   /home/letrend/altera/14.0/quartus/linux64/libccl_thr.so
+7f3fb42fe000-7f3fb431f000 rwxp 00000000 00:00 0 
+7f3fb4326000-7f3fb4328000 r-xp 00000000 08:13 26631753                   /home/letrend/altera/14.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f3fb4328000-7f3fb4527000 ---p 00002000 08:13 26631753                   /home/letrend/altera/14.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f3fb4527000-7f3fb4528000 rwxp 00001000 08:13 26631753                   /home/letrend/altera/14.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f3fb452e000-7f3fb4641000 r-xp 00000000 08:13 26632857                   /home/letrend/altera/14.0/quartus/linux64/libicuuc.so.34
+7f3fb4641000-7f3fb4840000 ---p 00113000 08:13 26632857                   /home/letrend/altera/14.0/quartus/linux64/libicuuc.so.34
+7f3fb4840000-7f3fb484e000 rwxp 00112000 08:13 26632857                   /home/letrend/altera/14.0/quartus/linux64/libicuuc.so.34
+7f3fb484e000-7f3fb4b8e000 r-xp 00000000 08:13 26632854                   /home/letrend/altera/14.0/quartus/linux64/libaxerces-c.so.26
+7f3fb4b8e000-7f3fb4d8d000 ---p 00340000 08:13 26632854                   /home/letrend/altera/14.0/quartus/linux64/libaxerces-c.so.26
+7f3fb4d8d000-7f3fb4dcc000 rwxp 0033f000 08:13 26632854                   /home/letrend/altera/14.0/quartus/linux64/libaxerces-c.so.26
+7f3fb4dcc000-7f3fb4dcd000 rwxp 00000000 00:00 0 
+7f3fb4dce000-7f3fb4de7000 r-xp 00000000 08:13 26631734                   /home/letrend/altera/14.0/quartus/linux64/libitcl3.4.so
+7f3fb4de7000-7f3fb4fe7000 ---p 00019000 08:13 26631734                   /home/letrend/altera/14.0/quartus/linux64/libitcl3.4.so
+7f3fb4fe7000-7f3fb4fe9000 rwxp 00019000 08:13 26631734                   /home/letrend/altera/14.0/quartus/linux64/libitcl3.4.so
+7f3fb4fee000-7f3fb50fa000 r-xp 00000000 08:13 26631735                   /home/letrend/altera/14.0/quartus/linux64/libtcl8.5.so
+7f3fb50fa000-7f3fb52fa000 ---p 0010c000 08:13 26631735                   /home/letrend/altera/14.0/quartus/linux64/libtcl8.5.so
+7f3fb52fa000-7f3fb5305000 rwxp 0010c000 08:13 26631735                   /home/letrend/altera/14.0/quartus/linux64/libtcl8.5.so
+7f3fb5305000-7f3fb5306000 rwxp 00000000 00:00 0 
+7f3fb5306000-7f3fb5331000 r-xp 00000000 08:13 26631741                   /home/letrend/altera/14.0/quartus/linux64/libtbb.so.2
+7f3fb5331000-7f3fb5531000 ---p 0002b000 08:13 26631741                   /home/letrend/altera/14.0/quartus/linux64/libtbb.so.2
+7f3fb5531000-7f3fb5534000 rwxp 0002b000 08:13 26631741                   /home/letrend/altera/14.0/quartus/linux64/libtbb.so.2
+7f3fb5534000-7f3fb5535000 rwxp 00000000 00:00 0 
+7f3fb5536000-7f3fb5545000 r-xp 00000000 08:13 26631739                   /home/letrend/altera/14.0/quartus/linux64/libtbbmalloc.so.2
+7f3fb5545000-7f3fb5745000 ---p 0000f000 08:13 26631739                   /home/letrend/altera/14.0/quartus/linux64/libtbbmalloc.so.2
+7f3fb5745000-7f3fb5747000 rwxp 0000f000 08:13 26631739                   /home/letrend/altera/14.0/quartus/linux64/libtbbmalloc.so.2
+7f3fb5747000-7f3fb5f54000 rwxp 00000000 00:00 0 
+7f3fb5f56000-7f3fb5f5b000 r-xp 00000000 08:13 26632724                   /home/letrend/altera/14.0/quartus/linux64/libtcl_jni_bridge.so
+7f3fb5f5b000-7f3fb615b000 ---p 00005000 08:13 26632724                   /home/letrend/altera/14.0/quartus/linux64/libtcl_jni_bridge.so
+7f3fb615b000-7f3fb615c000 rwxp 00005000 08:13 26632724                   /home/letrend/altera/14.0/quartus/linux64/libtcl_jni_bridge.so
+7f3fb615d000-7f3fb6160000 ---p 00000000 00:00 0 
+7f3fb6160000-7f3fb625e000 rwxp 00000000 00:00 0 
+7f3fb633e000-7f3fb6340000 r-xp 00000000 08:13 26632669                   /home/letrend/altera/14.0/quartus/linux64/libccl_mem_native.so
+7f3fb6340000-7f3fb653f000 ---p 00002000 08:13 26632669                   /home/letrend/altera/14.0/quartus/linux64/libccl_mem_native.so
+7f3fb653f000-7f3fb6540000 rwxp 00001000 08:13 26632669                   /home/letrend/altera/14.0/quartus/linux64/libccl_mem_native.so
+7f3fb6546000-7f3fb6548000 r-xp 00000000 08:13 26632744                   /home/letrend/altera/14.0/quartus/linux64/libqcl_pll_tcl.so
+7f3fb6548000-7f3fb6747000 ---p 00002000 08:13 26632744                   /home/letrend/altera/14.0/quartus/linux64/libqcl_pll_tcl.so
+7f3fb6747000-7f3fb6748000 rwxp 00001000 08:13 26632744                   /home/letrend/altera/14.0/quartus/linux64/libqcl_pll_tcl.so
+7f3fb674e000-7f3fb6764000 r-xp 00000000 08:13 28314679                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f3fb6764000-7f3fb6866000 ---p 00016000 08:13 28314679                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f3fb6866000-7f3fb687e000 rwxp 00018000 08:13 28314679                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f3fb687e000-7f3fb6a7e000 r-xp 00000000 08:13 26631733                   /home/letrend/altera/14.0/quartus/linux64/libnlview.so
+7f3fb6a7e000-7f3fb6a8d000 rwxp 00200000 08:13 26631733                   /home/letrend/altera/14.0/quartus/linux64/libnlview.so
+7f3fb6a8d000-7f3fb6a8f000 rwxp 00000000 00:00 0 
+7f3fb6a94000-7f3fb6a97000 ---p 00000000 00:00 0 
+7f3fb6a97000-7f3fb6b95000 rwxp 00000000 00:00 0 
+7f3fb6b95000-7f3fb6b98000 ---p 00000000 00:00 0 
+7f3fb6b98000-7f3fb6c96000 rwxp 00000000 00:00 0 
+7f3fb6c96000-7f3fb6c9d000 r-xp 00000000 08:13 28314775                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f3fb6c9d000-7f3fb6d9c000 ---p 00007000 08:13 28314775                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f3fb6d9c000-7f3fb6d9e000 rwxp 00006000 08:13 28314775                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f3fb6da4000-7f3fb6da7000 ---p 00000000 00:00 0 
+7f3fb6da7000-7f3fb71a6000 rwxp 00000000 00:00 0 
+7f3fb71a6000-7f3fb71bb000 r-xp 00000000 08:13 26632864                   /home/letrend/altera/14.0/quartus/linux64/libgcc_s.so.1
+7f3fb71bb000-7f3fb73ba000 ---p 00015000 08:13 26632864                   /home/letrend/altera/14.0/quartus/linux64/libgcc_s.so.1
+7f3fb73ba000-7f3fb73bb000 rwxp 00014000 08:13 26632864                   /home/letrend/altera/14.0/quartus/linux64/libgcc_s.so.1
+7f3fb73be000-7f3fb73cb000 r-xp 00000000 08:13 26632865                   /home/letrend/altera/14.0/quartus/linux64/libgomp.so.1
+7f3fb73cb000-7f3fb75ca000 ---p 0000d000 08:13 26632865                   /home/letrend/altera/14.0/quartus/linux64/libgomp.so.1
+7f3fb75ca000-7f3fb75cb000 rwxp 0000c000 08:13 26632865                   /home/letrend/altera/14.0/quartus/linux64/libgomp.so.1
+7f3fb75ce000-7f3fb76b5000 r-xp 00000000 08:13 26632866                   /home/letrend/altera/14.0/quartus/linux64/libstdc++.so.6
+7f3fb76b5000-7f3fb78b4000 ---p 000e7000 08:13 26632866                   /home/letrend/altera/14.0/quartus/linux64/libstdc++.so.6
+7f3fb78b4000-7f3fb78bc000 r-xp 000e6000 08:13 26632866                   /home/letrend/altera/14.0/quartus/linux64/libstdc++.so.6
+7f3fb78bc000-7f3fb78be000 rwxp 000ee000 08:13 26632866                   /home/letrend/altera/14.0/quartus/linux64/libstdc++.so.6
+7f3fb78be000-7f3fb78d3000 rwxp 00000000 00:00 0 
+7f3fb78d6000-7f3fb793b000 r-xp 00000000 08:13 26631732                   /home/letrend/altera/14.0/quartus/linux64/libdinkum_alt.so
+7f3fb793b000-7f3fb7b3b000 ---p 00065000 08:13 26631732                   /home/letrend/altera/14.0/quartus/linux64/libdinkum_alt.so
+7f3fb7b3b000-7f3fb7b42000 rwxp 00065000 08:13 26631732                   /home/letrend/altera/14.0/quartus/linux64/libdinkum_alt.so
+7f3fb7b42000-7f3fb7b43000 rwxp 00000000 00:00 0 
+7f3fb7b46000-7f3fb7be5000 r-xp 00000000 08:13 26631486                   /home/letrend/altera/14.0/quartus/linux64/libccl_sqlite3.so
+7f3fb7be5000-7f3fb7de4000 ---p 0009f000 08:13 26631486                   /home/letrend/altera/14.0/quartus/linux64/libccl_sqlite3.so
+7f3fb7de4000-7f3fb7de9000 rwxp 0009e000 08:13 26631486                   /home/letrend/altera/14.0/quartus/linux64/libccl_sqlite3.so
+7f3fb7dee000-7f3fb7dfb000 r-xp 00000000 08:13 26631685                   /home/letrend/altera/14.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f3fb7dfb000-7f3fb7ffa000 ---p 0000d000 08:13 26631685                   /home/letrend/altera/14.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f3fb7ffa000-7f3fb7ffb000 rwxp 0000c000 08:13 26631685                   /home/letrend/altera/14.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f3fb8000000-7f3fb878b000 rwxp 00000000 00:00 0 
+7f3fb878b000-7f3fbc000000 ---p 00000000 00:00 0 
+7f3fbc000000-7f3fbc021000 rwxp 00000000 00:00 0 
+7f3fbc021000-7f3fc0000000 ---p 00000000 00:00 0 
+7f3fc0000000-7f3fc0021000 rwxp 00000000 00:00 0 
+7f3fc0021000-7f3fc4000000 ---p 00000000 00:00 0 
+7f3fc4000000-7f3fc4021000 rwxp 00000000 00:00 0 
+7f3fc4021000-7f3fc8000000 ---p 00000000 00:00 0 
+7f3fc8000000-7f3fc8021000 rwxp 00000000 00:00 0 
+7f3fc8021000-7f3fcc000000 ---p 00000000 00:00 0 
+7f3fcc000000-7f3fcc021000 rwxp 00000000 00:00 0 
+7f3fcc021000-7f3fd0000000 ---p 00000000 00:00 0 
+7f3fd0000000-7f3fd3fe2000 rwxp 00000000 00:00 0 
+7f3fd3fe2000-7f3fd4000000 ---p 00000000 00:00 0 
+7f3fd4000000-7f3fd7ffb000 rwxp 00000000 00:00 0 
+7f3fd7ffb000-7f3fd8000000 ---p 00000000 00:00 0 
+7f3fd8000000-7f3fd8021000 rwxp 00000000 00:00 0 
+7f3fd8021000-7f3fdc000000 ---p 00000000 00:00 0 
+7f3fdc000000-7f3fdc021000 rwxp 00000000 00:00 0 
+7f3fdc021000-7f3fe0000000 ---p 00000000 00:00 0 
+7f3fe0000000-7f3fe019a000 rwxp 00000000 00:00 0 
+7f3fe019a000-7f3fe4000000 ---p 00000000 00:00 0 
+7f3fe4000000-7f3fe4021000 rwxp 00000000 00:00 0 
+7f3fe4021000-7f3fe8000000 ---p 00000000 00:00 0 
+7f3fe8000000-7f3fe802f000 rwxp 00000000 00:00 0 
+7f3fe802f000-7f3fec000000 ---p 00000000 00:00 0 
+7f3fec000000-7f3fec021000 rwxp 00000000 00:00 0 
+7f3fec021000-7f3ff0000000 ---p 00000000 00:00 0 
+7f3ff0000000-7f3ff0021000 rwxp 00000000 00:00 0 
+7f3ff0021000-7f3ff4000000 ---p 00000000 00:00 0 
+7f3ff4000000-7f3ff4024000 rwxp 00000000 00:00 0 
+7f3ff4024000-7f3ff8000000 ---p 00000000 00:00 0 
+7f3ff8000000-7f3ff8acd000 rwxp 00000000 00:00 0 
+7f3ff8acd000-7f3ffc000000 ---p 00000000 00:00 0 
+7f3ffc086000-7f3ffc087000 r-xs 00018000 08:13 1704694                    /home/letrend/altera/14.0/ip/altera/common/ip_toolbench/v1.3.0/bin/util/netlist_to_hdl.jar
+7f3ffc088000-7f3ffc089000 r-xs 00002000 08:13 1707572                    /home/letrend/altera/14.0/ip/altera/common/ip_toolbench/v1.3.0/bin/util/jptf.jar
+7f3ffc08c000-7f3ffc093000 r-xs 000a6000 08:13 1704691                    /home/letrend/altera/14.0/ip/altera/common/ip_toolbench/v1.3.0/bin/flowmanager.jar
+7f3ffc096000-7f3ffc09b000 r-xs 00040000 08:13 1704689                    /home/letrend/altera/14.0/ip/altera/common/ip_toolbench/v1.3.0/bin/flowbase.jar
+7f3ffc0a1000-7f3ffc0a4000 r-xs 00013000 08:13 1704690                    /home/letrend/altera/14.0/ip/altera/common/ip_toolbench/v1.3.0/bin/velocity-tools-1.2.jar
+7f3ffc0aa000-7f3ffc0b5000 r-xs 00074000 08:13 1704682                    /home/letrend/altera/14.0/ip/altera/common/ip_toolbench/v1.3.0/bin/velocity-dep-1.4.jar
+7f3ffc0b9000-7f3ffc0bc000 r-xs 00023000 08:13 1314010                    /home/letrend/altera/14.0/ip/altera/ddr3_high_perf/lib/ip_toolbench/jdom.jar
+7f3ffc0bd000-7f3ffc0c0000 ---p 00000000 00:00 0 
+7f3ffc0c0000-7f3ffc1be000 rwxp 00000000 00:00 0 
+7f3ffc1be000-7f3ffc1c9000 r-xs 00000000 08:05 265598                     /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-6
+7f3ffc1ce000-7f3ffc1d4000 r-xs 00000000 08:05 265291                     /var/cache/fontconfig/2cd17615ca594fa2959ae173292e504c-le64.cache-6
+7f3ffc1d6000-7f3ffc1dd000 r-xs 00000000 08:05 265289                     /var/cache/fontconfig/6eb3985aa4124903f6ff08ba781cd364-le64.cache-6
+7f3ffc1de000-7f3ffc1df000 r-xs 00000000 08:05 265130                     /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-6
+7f3ffc1e6000-7f3ffc1fb000 r-xs 00000000 08:05 265127                     /var/cache/fontconfig/04aabc0a78ac019cf9454389977116d2-le64.cache-6
+7f3ffc201000-7f3ffc202000 r-xs 00003000 08:13 1707571                    /home/letrend/altera/14.0/ip/altera/common/ip_toolbench/v1.3.0/bin/launcher.jar
+7f3ffc204000-7f3ffc207000 r-xs 0004e000 08:13 1314011                    /home/letrend/altera/14.0/ip/altera/ddr3_high_perf/lib/ip_toolbench/forms_rt.jar
+7f3ffc20e000-7f3ffc20f000 r-xs 00000000 08:13 1314909                    /home/letrend/altera/14.0/ip/altera/ddr3_high_perf/lib/ip_toolbench/altmemphy.jar
+7f3ffc210000-7f3ffc224000 r-xs 0031a000 08:13 1315502                    /home/letrend/altera/14.0/ip/altera/ddr3_high_perf/lib/ip_toolbench/ddr3_high_performance_controller.jar
+7f3ffc227000-7f3ffc22a000 r-xs 000c9000 08:13 28970896                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/ext/localedata.jar
+7f3ffc22a000-7f3ffc232000 r-xs 00034000 08:13 27270754                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/simulink_model.jar
+7f3ffc234000-7f3ffc254000 r-xs 001d6000 08:13 27270757                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/extlibs/castor-1.0.3.jar
+7f3ffc258000-7f3ffc2c7000 r-xs 006c2000 08:13 30022904                   /home/letrend/altera/14.0/quartus/cusp/bin/cusp-engine.jar
+7f3ffc2ce000-7f3ffc2e1000 r-xp 00000000 08:13 28314676                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f3ffc2e1000-7f3ffc3e2000 ---p 00013000 08:13 28314676                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f3ffc3e2000-7f3ffc3e5000 rwxp 00014000 08:13 28314676                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f3ffc3e9000-7f3ffc3ec000 ---p 00000000 00:00 0 
+7f3ffc3ec000-7f3ffc4ea000 rwxp 00000000 00:00 0 
+7f3ffc4ea000-7f3ffc4ed000 ---p 00000000 00:00 0 
+7f3ffc4ed000-7f3ffc5eb000 rwxp 00000000 00:00 0 
+7f3ffc5eb000-7f3ffc5f3000 r-xs 00115000 08:13 28314657                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/resources.jar
+7f3ffc5f4000-7f3ffc5f7000 ---p 00000000 00:00 0 
+7f3ffc5f7000-7f3ffc6f5000 rwxp 00000000 00:00 0 
+7f3ffc6f5000-7f3ffc6f8000 ---p 00000000 00:00 0 
+7f3ffc6f8000-7f3ffc7f6000 rwxp 00000000 00:00 0 
+7f3ffc7f6000-7f3ffc86f000 r-xp 00000000 08:13 28314661                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f3ffc86f000-7f3ffc96e000 ---p 00079000 08:13 28314661                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f3ffc96e000-7f3ffc983000 rwxp 00078000 08:13 28314661                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f3ffc983000-7f3ffc994000 rwxp 00000000 00:00 0 
+7f3ffc996000-7f3ffc9a5000 r-xp 00000000 08:05 1450248                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ffc9a5000-7f3ffcba4000 ---p 0000f000 08:05 1450248                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ffcba4000-7f3ffcba5000 r-xp 0000e000 08:05 1450248                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ffcba5000-7f3ffcba6000 rwxp 0000f000 08:05 1450248                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ffcba6000-7f3ffcbab000 r-xp 00000000 08:05 1450266                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ffcbab000-7f3ffcdaa000 ---p 00005000 08:05 1450266                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ffcdaa000-7f3ffcdab000 r-xp 00004000 08:05 1450266                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ffcdab000-7f3ffcdac000 rwxp 00005000 08:05 1450266                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ffcdae000-7f3ffcdf0000 r-xp 00000000 08:13 28314683                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/xawt/libmawt.so
+7f3ffcdf0000-7f3ffceef000 ---p 00042000 08:13 28314683                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/xawt/libmawt.so
+7f3ffceef000-7f3ffcefb000 rwxp 00041000 08:13 28314683                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/xawt/libmawt.so
+7f3ffcefb000-7f3ffcefc000 rwxp 00000000 00:00 0 
+7f3ffceff000-7f3ffdf7f000 rwxp 00000000 00:00 0 
+7f3ffdf7f000-7f3fffeff000 rwxp 00000000 00:00 0 
+7f3fffeff000-7f3ffff02000 ---p 00000000 00:00 0 
+7f3ffff02000-7f4000000000 rwxp 00000000 00:00 0 
+7f4000000000-7f400042e000 rwxp 00000000 00:00 0 
+7f400042e000-7f4004000000 ---p 00000000 00:00 0 
+7f4004006000-7f400400a000 r-xs 00000000 08:05 265129                     /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le64.cache-6
+7f400400e000-7f4004012000 r-xs 00000000 08:05 265128                     /var/cache/fontconfig/de156ccd2eddbdc19d37a45b8b2aac9c-le64.cache-6
+7f4004016000-7f4004017000 r-xs 00000000 08:05 264752                     /var/cache/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-6
+7f400401e000-7f4004022000 r-xs 00000000 08:05 264750                     /var/cache/fontconfig/385c0604a188198f04d133e54aba7fe7-le64.cache-6
+7f4004026000-7f4004027000 r-xs 00000000 08:05 264749                     /var/cache/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-6
+7f400402e000-7f4004031000 r-xs 00000000 08:05 264748                     /var/cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-6
+7f4004036000-7f4004037000 r-xs 00000000 08:05 273952                     /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-6
+7f400403e000-7f4004043000 r-xs 00000000 08:05 264746                     /var/cache/fontconfig/8801497958630a81b71ace7c5f9b32a8-le64.cache-6
+7f4004046000-7f400404a000 r-xs 00000000 08:05 264745                     /var/cache/fontconfig/c57959a16110560c8d0fcea73374aeeb-le64.cache-6
+7f400404e000-7f400404f000 r-xs 00000000 08:05 264742                     /var/cache/fontconfig/bab58bb527bb656aaa9f116d68a48d89-le64.cache-6
+7f4004056000-7f400405d000 r-xs 00000000 08:05 264741                     /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-6
+7f400405e000-7f4004066000 r-xs 00000000 08:05 264740                     /var/cache/fontconfig/bf3b770c553c462765856025a94f1ce6-le64.cache-6
+7f4004066000-7f4004067000 r-xs 00000000 08:05 264610                     /var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le64.cache-6
+7f400406e000-7f400406f000 r-xs 00000000 08:05 264609                     /var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le64.cache-6
+7f4004076000-7f400407c000 r-xs 00000000 08:05 264606                     /var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le64.cache-6
+7f400407e000-7f4004091000 r-xs 00000000 08:05 264604                     /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-6
+7f4004096000-7f4004097000 r-xs 00000000 08:05 264603                     /var/cache/fontconfig/551ecf3b0e8b0bca0f25c0944f561853-le64.cache-6
+7f400409e000-7f40040a9000 r-xs 00000000 08:05 264602                     /var/cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-6
+7f40040ae000-7f40040af000 r-xs 00000000 08:05 264601                     /var/cache/fontconfig/30829fa25452a46451e813d634d7f916-le64.cache-6
+7f40040b6000-7f40040b7000 r-xs 00000000 08:05 264600                     /var/cache/fontconfig/0c9eb80ebd1c36541ebe2852d3bb0c49-le64.cache-6
+7f40040be000-7f40040c1000 r-xs 00000000 08:05 264595                     /var/cache/fontconfig/75114ca45c98e8a441da0ff356701271-le64.cache-6
+7f40040c6000-7f40040d1000 r-xs 00000000 08:05 264553                     /var/cache/fontconfig/83bf95040141907cd45bb53cf7c1c148-le64.cache-6
+7f40040d6000-7f40040e8000 r-xs 00000000 08:05 264075                     /var/cache/fontconfig/9b89f8e3dae116d678bbf48e5f21f69b-le64.cache-6
+7f40040ee000-7f40040f1000 r-xs 00000000 08:05 264542                     /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-6
+7f40040f6000-7f40040fa000 r-xs 00000000 08:05 262363                     /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-6
+7f40040fe000-7f4004190000 r-xp 00000000 08:13 28314671                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f4004190000-7f400428f000 ---p 00092000 08:13 28314671                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f400428f000-7f40042a8000 rwxp 00091000 08:13 28314671                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f40042a8000-7f40042cd000 rwxp 00000000 00:00 0 
+7f40042ce000-7f40042cf000 r-xs 00000000 08:13 29759665                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/xmlbeans-2.2.0.jar
+7f40042d4000-7f4004311000 r-xs 0024e000 08:13 29759706                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/xbean.jar
+7f4004316000-7f4004318000 r-xs 00008000 08:13 29759666                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/wraplf.jar
+7f4004318000-7f4004319000 r-xs 00002000 08:13 29759653                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/swing-worker.jar
+7f400431a000-7f400431c000 r-xs 00014000 08:13 29759512                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/org-netbeans-swing-outline-RELEASE691-sources.jar
+7f400431f000-7f4004320000 r-xs 00011000 08:13 29759569                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/miglayout-swing.jar
+7f4004324000-7f400432a000 r-xs 0002e000 08:13 29759548                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/l2fprod-common-sheet.jar
+7f400432a000-7f400432c000 r-xs 00004000 08:13 29759668                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jsr173_1.0_api.jar
+7f4004333000-7f400433f000 r-xs 0008d000 08:13 29759524                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jgraphx.jar
+7f4004342000-7f4004353000 r-xs 0014c000 08:13 29759587                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jfreechart-1.0.13.jar
+7f4004354000-7f400435a000 r-xs 00046000 08:13 29759281                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jcommon-1.0.16.jar
+7f4004360000-7f4004397000 r-xs 0020a000 08:13 29759592                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/docking-frames-core.jar
+7f400439a000-7f40043af000 r-xs 000b4000 08:13 29759595                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/docking-frames-common.jar
+7f40043b1000-7f40043b2000 r-xs 00003000 08:13 29759654                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.util.elf.jar
+7f40043b8000-7f40043ba000 r-xs 00002000 08:13 29759678                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.tools.sopcformats.jar
+7f40043c0000-7f40043c1000 r-xs 00002000 08:13 29759647                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.tools.exampledesigns.jar
+7f40043c4000-7f40043c5000 r-xs 00006000 08:13 29759639                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.spdy.jar
+7f40043c9000-7f40043ca000 r-xs 0000b000 08:13 29759675                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.sldhubchannel.jar
+7f40043d0000-7f40043d3000 r-xs 00012000 08:13 29759594                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.gdbserver.jar
+7f40043d4000-7f40043d6000 r-xs 00006000 08:13 29759655                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.issp.jar
+7f40043db000-7f40043de000 r-xs 0000d000 08:13 29759558                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.monitor.jar
+7f40043e5000-7f40043ec000 r-xs 0003f000 08:13 29759280                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.busanalyzer.jar
+7f40043f3000-7f40043f6000 r-xs 00015000 08:13 29759579                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.dashboard.jar
+7f40043f6000-7f40043fa000 r-xs 00020000 08:13 29759604                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.gui.jar
+7f40043fd000-7f4004402000 r-xs 00027000 08:13 29759584                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.database.jar
+7f4004407000-7f4004408000 r-xs 00001000 08:13 29759661                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.memory.jar
+7f4004409000-7f400440b000 r-xs 00003000 08:13 29759679                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.pli.jar
+7f400440c000-7f400440e000 r-xs 00006000 08:13 29759676                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.tcpchannel.jar
+7f4004413000-7f4004415000 r-xs 00005000 08:13 29759660                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.configrom.jar
+7f4004417000-7f4004419000 r-xs 00011000 08:13 29759274                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.usb.jar
+7f400441a000-7f400441e000 r-xs 0001c000 08:13 29759527                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.drivers.jar
+7f400441f000-7f4004420000 r-xs 00001000 08:13 29759644                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.matlabapi.jar
+7f4004426000-7f4004429000 r-xs 00018000 08:13 29759582                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.app.jar
+7f400442a000-7f400442c000 r-xs 0000c000 08:13 29759560                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.hwtclvalidator.jar
+7f400442c000-7f400442d000 r-xs 0000e000 08:13 29759601                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.packetformatconverter.jar
+7f4004431000-7f4004433000 r-xs 00003000 08:13 29759656                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.script.debugwindow.jar
+7f4004437000-7f4004439000 r-xs 00001000 08:13 29759641                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.nios2.trace.jar
+7f400443f000-7f4004441000 r-xs 00009000 08:13 29759649                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.nios2.rtl.trace.jar
+7f4004448000-7f4004456000 r-xs 00072000 08:13 29759503                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.nios2.isa.jar
+7f400445c000-7f4004465000 r-xs 00076000 08:13 29759533                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jmwizc.jar
+7f400446b000-7f400446f000 r-xs 0002d000 08:13 29759271                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.sbtools.jar
+7f4004474000-7f4004499000 r-xs 00236000 08:13 29759277                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopceditor.jar
+7f40044a0000-7f40044a2000 r-xs 00002000 08:13 29759652                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.qsys.ui.jar
+7f40044a7000-7f40044a9000 r-xs 00009000 08:13 29759681                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.widgets.jar
+7f40044ae000-7f40044b1000 r-xs 00020000 08:13 29759522                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.iplauncher.jar
+7f40044b4000-7f40044b6000 r-xs 0000e000 08:13 29759567                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.ip.regenerator.jar
+7f40044ba000-7f40044be000 r-xs 00024000 08:13 29759286                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.genman.jar
+7f40044c3000-7f40044c6000 r-xs 0002d000 08:13 29759538                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.launch.jar
+7f40044c6000-7f40044c7000 r-xs 00000000 08:13 29759642                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.jtagsimulator.jar
+7f40044c8000-7f40044c9000 r-xs 00002000 08:13 29759663                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.lightclient.jar
+7f40044cc000-7f40044d3000 r-xs 0003e000 08:13 29759559                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.jtag.jar
+7f40044d8000-7f40044e6000 r-xs 00072000 08:13 29759550                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.elf.jar
+7f40044ec000-7f40044f0000 r-xs 00036000 08:13 29759605                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.gui.jar
+7f40044f4000-7f40044f7000 r-xs 00036000 08:13 29759508                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.scripting.jar
+7f40044fa000-7f4004500000 r-xs 00044000 08:13 29759509                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.designs.jar
+7f4004507000-7f4004511000 r-xs 00181000 08:13 29759526                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.jar
+7f4004513000-7f400451a000 r-xs 00055000 08:13 29759547                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.flash.jar
+7f400451a000-7f400451b000 r-xs 00004000 08:13 29759664                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar
+7f4004521000-7f4004522000 r-xs 00003000 08:13 29759651                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.tcl.ui.jar
+7f4004525000-7f4004526000 r-xs 0001f000 08:13 29759606                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar
+7f400452c000-7f400452e000 r-xs 00006000 08:13 29759648                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar
+7f4004531000-7f4004533000 r-xs 0000b000 08:13 29759565                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar
+7f4004537000-7f4004539000 r-xs 00001000 08:13 29759669                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar
+7f400453d000-7f400453f000 r-xs 0000f000 08:13 29759532                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar
+7f4004540000-7f400454d000 r-xs 00082000 08:13 29759588                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar
+7f4004552000-7f400455d000 r-xs 00074000 08:13 29759529                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/velocity-dep-1.4.jar
+7f4004561000-7f4004563000 r-xs 00003000 08:13 29759643                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcfactories.jar
+7f4004565000-7f4004569000 r-xs 0001f000 08:13 29759504                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/explicitlayout.jar
+7f4004569000-7f4004570000 r-xs 00063000 08:13 29759284                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.megawizard2.jar
+7f4004577000-7f400457f000 r-xs 00051000 08:13 29759555                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/velocity-1.4.jar
+7f400457f000-7f4004583000 r-xs 00029000 08:13 29759279                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.jar
+7f400458a000-7f400458b000 r-xs 0000c000 08:13 29759272                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/commons-logging-1.1.jar
+7f4004592000-7f4004593000 r-xs 00014000 08:13 29759599                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/javasysmon.jar
+7f4004599000-7f400459d000 r-xs 0003b000 08:13 29759598                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.utilities.jar
+7f40045a2000-7f40045a6000 r-xs 0000c000 08:13 29759510                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.privateinterfaces.jar
+7f40045ad000-7f40045bb000 r-xs 000d7000 08:13 29759539                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.jar
+7f40045bf000-7f40045c2000 r-xs 00019000 08:13 29759607                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopclibrary.jar
+7f40045c9000-7f40045cc000 r-xs 0000b000 08:13 29759528                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar
+7f40045ce000-7f40045d0000 r-xs 00000000 08:13 29759674                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.librarian.jar
+7f40045d0000-7f40045d1000 r-xs 00002000 08:13 29759667                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcplatform.jar
+7f40045d6000-7f40045d7000 r-xs 00000000 08:13 29759646                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.service.jre.jar
+7f40045da000-7f40045de000 r-xs 0001c000 08:13 29759583                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.utilities.jar
+7f40045e1000-7f40045e2000 r-xs 00003000 08:13 29759640                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.embeddedsw.jar
+7f40045e4000-7f40045e6000 r-xs 00016000 08:13 29759585                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.swinfo.jar
+7f40045eb000-7f40045ef000 r-xs 0000d000 08:13 29759544                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar
+7f40045f0000-7f40045f2000 r-xs 0000a000 08:13 29759671                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar
+7f40045f6000-7f40045fb000 r-xs 00050000 08:13 29759586                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar
+7f40045fb000-7f40045fd000 r-xs 00015000 08:13 29759557                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar
+7f4004604000-7f4004605000 r-xs 0000e000 08:13 29759552                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jline-0.9.91.jar
+7f4004607000-7f400460d000 r-xs 00079000 08:13 29759285                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jacl1.3.2a.jar
+7f400460f000-7f4004613000 r-xs 00029000 08:13 29759511                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.tcl.interpreter.jar
+7f4004616000-7f400461c000 r-xs 00048000 08:13 29759534                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar
+7f4004622000-7f400462b000 r-xs 00054000 08:13 29759275                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.qsys.ipxact.jar
+7f400462f000-7f4004635000 r-xs 00031000 08:13 29759602                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jaxb-core.jar
+7f400463b000-7f400463f000 r-xs 00015000 08:13 29759576                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jaxb-api.jar
+7f4004646000-7f4004657000 r-xs 000d0000 08:13 29759561                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/jaxb-impl.jar
+7f400465a000-7f4004663000 r-xs 00054000 08:13 29759573                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.qsys.cmsis.jar
+7f4004663000-7f4004665000 r-xs 0000d000 08:13 29759536                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.atlantic.jar
+7f400466c000-7f4004672000 r-xs 00056000 08:13 29759581                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.transforms.jar
+7f4004675000-7f4004677000 r-xs 00007000 08:13 29759670                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcreport.jar
+7f4004677000-7f4004679000 r-xs 00009000 08:13 29759650                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcdocument.jar
+7f4004680000-7f4004683000 r-xs 00012000 08:13 29759566                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcreport.build.jar
+7f4004686000-7f400468c000 r-xs 00048000 08:13 29759537                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopc.generator.jar
+7f4004691000-7f4004698000 r-xs 0007b000 08:13 29759597                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.tclmodule.jar
+7f400469f000-7f40046c9000 r-xs 001e9000 08:13 29759590                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/guava-15.0.jar
+7f40046cb000-7f40046d1000 r-xs 00045000 08:13 29759282                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar
+7f40046d8000-7f40046da000 r-xs 00022000 08:13 29759575                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.hdlwriter.jar
+7f40046dc000-7f40046df000 r-xs 0000e000 08:13 29759507                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.minieval2.jar
+7f40046e4000-7f40046e5000 r-xs 00006000 08:13 29759645                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.hdlcomponent.jar
+7f40046ec000-7f40046ef000 r-xs 00036000 08:13 29759542                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/org-netbeans-swing-outline.jar
+7f40046f6000-7f40046f8000 r-xs 00010000 08:13 29759568                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.sopc.qsymbol.jar
+7f40046fe000-7f4004700000 r-xs 00018000 08:13 29759546                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.jdbcsqlite.jar
+7f4004706000-7f4004707000 r-xs 00000000 08:13 29759662                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.version.jar
+7f4004707000-7f4004711000 r-xs 00069000 08:13 29759276                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.ui.ientity.jar
+7f4004717000-7f4004718000 ---p 00000000 00:00 0 
+7f4004718000-7f4004818000 rwxp 00000000 00:00 0 
+7f4004818000-7f400481b000 ---p 00000000 00:00 0 
+7f400481b000-7f4004919000 rwxp 00000000 00:00 0 
+7f4004919000-7f400491c000 ---p 00000000 00:00 0 
+7f400491c000-7f4004a1a000 rwxp 00000000 00:00 0 
+7f4004a1a000-7f4004a1d000 ---p 00000000 00:00 0 
+7f4004a1d000-7f4004b1b000 rwxp 00000000 00:00 0 
+7f4004b1b000-7f4004b1e000 ---p 00000000 00:00 0 
+7f4004b1e000-7f4004c1c000 rwxp 00000000 00:00 0 
+7f4004c1c000-7f4004c1f000 ---p 00000000 00:00 0 
+7f4004c1f000-7f4004d1d000 rwxp 00000000 00:00 0 
+7f4004d1d000-7f4004d20000 ---p 00000000 00:00 0 
+7f4004d20000-7f4004e1e000 rwxp 00000000 00:00 0 
+7f4004e1e000-7f4004e1f000 ---p 00000000 00:00 0 
+7f4004e1f000-7f4005424000 rwxp 00000000 00:00 0 
+7f4005424000-7f40055bc000 r-xs 02b0e000 08:13 28314934                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/rt.jar
+7f40055c0000-7f40055c1000 ---p 00000000 00:00 0 
+7f40055c1000-7f40056c1000 rwxp 00000000 00:00 0 
+7f40056c1000-7f40056c2000 ---p 00000000 00:00 0 
+7f40056c2000-7f40057c2000 rwxp 00000000 00:00 0 
+7f40057c2000-7f40057c3000 ---p 00000000 00:00 0 
+7f40057c3000-7f40058c3000 rwxp 00000000 00:00 0 
+7f40058c3000-7f40058c4000 ---p 00000000 00:00 0 
+7f40058c4000-7f4005aca000 rwxp 00000000 00:00 0 
+7f4005aca000-7f4005ea4000 rwxp 00000000 00:00 0 
+7f4005ea4000-7f4005ecd000 rwxp 00000000 00:00 0 
+7f4005ecd000-7f4005fd3000 rwxp 00000000 00:00 0 
+7f4005fd3000-7f40063ad000 rwxp 00000000 00:00 0 
+7f40063ad000-7f400661d000 rwxp 00000000 00:00 0 
+7f400661d000-7f4006660000 rwxp 00000000 00:00 0 
+7f4006660000-7f40066de000 rwxp 00000000 00:00 0 
+7f40066de000-7f40066ec000 r-xp 00000000 08:13 28314678                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f40066ec000-7f40067ee000 ---p 0000e000 08:13 28314678                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f40067ee000-7f40067f1000 rwxp 00010000 08:13 28314678                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f40067f1000-7f40067f2000 rwxp 00000000 00:00 0 
+7f40067f6000-7f4006801000 r-xp 00000000 08:05 525679                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f4006801000-7f4006a00000 ---p 0000b000 08:05 525679                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f4006a00000-7f4006a01000 r-xp 0000a000 08:05 525679                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f4006a01000-7f4006a02000 rwxp 0000b000 08:05 525679                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f4006a02000-7f4006a08000 rwxp 00000000 00:00 0 
+7f4006a0e000-7f4006a19000 r-xp 00000000 08:05 525663                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f4006a19000-7f4006c18000 ---p 0000b000 08:05 525663                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f4006c18000-7f4006c19000 r-xp 0000a000 08:05 525663                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f4006c19000-7f4006c1a000 rwxp 0000b000 08:05 525663                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f4006c1e000-7f4006c26000 r-xp 00000000 08:05 525681                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f4006c26000-7f4006e25000 ---p 00008000 08:05 525681                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f4006e25000-7f4006e26000 r-xp 00007000 08:05 525681                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f4006e26000-7f4006e27000 rwxp 00008000 08:05 525681                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f4006e2e000-7f4006e35000 r-xp 00000000 08:13 28446931                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/native_threads/libhpi.so
+7f4006e35000-7f4006f36000 ---p 00007000 08:13 28446931                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/native_threads/libhpi.so
+7f4006f36000-7f4006f38000 rwxp 00008000 08:13 28446931                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/native_threads/libhpi.so
+7f4006f38000-7f4006f39000 rwxp 00000000 00:00 0 
+7f4006f3e000-7f4006f54000 r-xp 00000000 08:05 525667                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f4006f54000-7f4007153000 ---p 00016000 08:05 525667                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f4007153000-7f4007154000 r-xp 00015000 08:05 525667                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f4007154000-7f4007155000 rwxp 00016000 08:05 525667                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f4007155000-7f4007157000 rwxp 00000000 00:00 0 
+7f400715e000-7f4007187000 r-xp 00000000 08:13 28314670                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f4007187000-7f4007286000 ---p 00029000 08:13 28314670                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f4007286000-7f400728d000 rwxp 00028000 08:13 28314670                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f400728e000-7f400729b000 r-xp 00000000 08:13 28314680                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f400729b000-7f400739a000 ---p 0000d000 08:13 28314680                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f400739a000-7f400739d000 rwxp 0000c000 08:13 28314680                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f400739e000-7f40073a5000 r-xp 00000000 08:05 525682                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f40073a5000-7f40075a4000 ---p 00007000 08:05 525682                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f40075a4000-7f40075a5000 r-xp 00006000 08:05 525682                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f40075a5000-7f40075a6000 rwxp 00007000 08:05 525682                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f40075a6000-7f40075ab000 r-xp 00000000 08:05 1450242                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f40075ab000-7f40077aa000 ---p 00005000 08:05 1450242                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f40077aa000-7f40077ab000 r-xp 00004000 08:05 1450242                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f40077ab000-7f40077ac000 rwxp 00005000 08:05 1450242                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f40077ae000-7f40077b7000 r-xp 00000000 08:05 1450260                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f40077b7000-7f40079b6000 ---p 00009000 08:05 1450260                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f40079b6000-7f40079b7000 r-xp 00008000 08:05 1450260                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f40079b7000-7f40079b8000 rwxp 00009000 08:05 1450260                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f40079be000-7f40079c7000 r-xp 00000000 08:05 1450234                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f40079c7000-7f4007bc6000 ---p 00009000 08:05 1450234                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f4007bc6000-7f4007bc7000 r-xp 00008000 08:05 1450234                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f4007bc7000-7f4007bc8000 rwxp 00009000 08:05 1450234                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f4007bce000-7f4008024000 r-xp 00000000 08:05 1443417                    /usr/lib/locale/locale-archive
+7f4008029000-7f400802a000 ---p 00000000 00:00 0 
+7f400802a000-7f4008a2a000 rwxp 00000000 00:00 0 
+7f4008a31000-7f4008a32000 r-xs 00003000 08:13 1707587                    /home/letrend/altera/14.0/ip/altera/hps/widget/pin_mux_widget.jar
+7f4008a35000-7f4008a37000 r-xs 0000f000 08:13 27270756                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/extlibs/JSAP-2.0a.jar
+7f4008a3b000-7f4008a4a000 r-xs 00085000 08:13 27270753                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/dspb.jar
+7f4008a4e000-7f4008a4f000 r-xs 00000000 08:13 1312774                    /home/letrend/altera/14.0/quartus/common/librarian/factories/mdl_factory.jar
+7f4008a51000-7f4008a53000 r-xs 00003000 08:13 1312772                    /home/letrend/altera/14.0/quartus/common/librarian/factories/cusp-factory.jar
+7f4008a5a000-7f4008a65000 r-xs 00074000 08:13 27270750                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/extlibs/velocity-dep-1.4.jar
+7f4008a69000-7f4008a6c000 r-xs 00013000 08:13 27270752                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/extlibs/velocity-tools-1.2.jar
+7f4008a6f000-7f4008a77000 r-xs 00051000 08:13 27270751                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/extlibs/velocity-1.4.jar
+7f4008a77000-7f4008a8a000 r-xs 00089000 08:13 27270755                   /home/letrend/altera/14.0/quartus/dsp_builder/bin64/dspb_entities.jar
+7f4008a8e000-7f4008a8f000 r-xs 00000000 08:13 1312771                    /home/letrend/altera/14.0/quartus/common/librarian/factories/dspb_entities.jar
+7f4008a96000-7f4008a9b000 r-xp 00000000 08:05 1450238                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f4008a9b000-7f4008c9a000 ---p 00005000 08:05 1450238                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f4008c9a000-7f4008c9b000 r-xp 00004000 08:05 1450238                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f4008c9b000-7f4008c9c000 rwxp 00005000 08:05 1450238                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f4008c9e000-7f4008ca0000 r-xp 00000000 08:05 1450227                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f4008ca0000-7f4008ea0000 ---p 00002000 08:05 1450227                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f4008ea0000-7f4008ea1000 r-xp 00002000 08:05 1450227                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f4008ea1000-7f4008ea2000 rwxp 00003000 08:05 1450227                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f4008ea6000-7f4008ec7000 r-xp 00000000 08:05 1451605                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f4008ec7000-7f40090c6000 ---p 00021000 08:05 1451605                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f40090c6000-7f40090c7000 r-xp 00020000 08:05 1451605                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f40090c7000-7f40090c8000 rwxp 00021000 08:05 1451605                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f40090ce000-7f40090df000 r-xp 00000000 08:05 1450240                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f40090df000-7f40092de000 ---p 00011000 08:05 1450240                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f40092de000-7f40092df000 r-xp 00010000 08:05 1450240                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f40092df000-7f40092e0000 rwxp 00011000 08:05 1450240                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f40092e6000-7f400941b000 r-xp 00000000 08:05 1450223                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f400941b000-7f400961b000 ---p 00135000 08:05 1450223                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f400961b000-7f400961c000 r-xp 00135000 08:05 1450223                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f400961c000-7f4009620000 rwxp 00136000 08:05 1450223                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f4009626000-7f400965b000 r-xp 00000000 08:13 28314669                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f400965b000-7f400975a000 ---p 00035000 08:13 28314669                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f400975a000-7f4009765000 rwxp 00034000 08:13 28314669                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f4009765000-7f4009768000 rwxp 00000000 00:00 0 
+7f400976e000-7f4009876000 r-xp 00000000 08:05 525665                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f4009876000-7f4009a75000 ---p 00108000 08:05 525665                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f4009a75000-7f4009a76000 r-xp 00107000 08:05 525665                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f4009a76000-7f4009a77000 rwxp 00108000 08:05 525665                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f4009a7e000-7f400a294000 r-xp 00000000 08:13 28314935                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f400a294000-7f400a393000 ---p 00816000 08:13 28314935                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f400a393000-7f400a527000 rwxp 00815000 08:13 28314935                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f400a527000-7f400a560000 rwxp 00000000 00:00 0 
+7f400a566000-7f400a725000 r-xp 00000000 08:05 525669                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f400a725000-7f400a925000 ---p 001bf000 08:05 525669                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f400a925000-7f400a929000 r-xp 001bf000 08:05 525669                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f400a929000-7f400a92b000 rwxp 001c3000 08:05 525669                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f400a92b000-7f400a92f000 rwxp 00000000 00:00 0 
+7f400a936000-7f400a939000 r-xp 00000000 08:05 525661                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f400a939000-7f400ab38000 ---p 00003000 08:05 525661                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f400ab38000-7f400ab39000 r-xp 00002000 08:05 525661                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f400ab39000-7f400ab3a000 rwxp 00003000 08:05 525661                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f400ab3e000-7f400ab56000 r-xp 00000000 08:05 525686                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f400ab56000-7f400ad55000 ---p 00018000 08:05 525686                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f400ad55000-7f400ad56000 r-xp 00017000 08:05 525686                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f400ad56000-7f400ad57000 rwxp 00018000 08:05 525686                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f400ad57000-7f400ad5b000 rwxp 00000000 00:00 0 
+7f400ad5e000-7f400ad84000 r-xp 00000000 08:05 525672                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f400ad8a000-7f400ad8c000 r-xs 0000c000 08:13 29759506                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.infrastructure.jar
+7f400ad91000-7f400ad92000 r-xs 00003000 08:13 29759673                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.ui.quartus.jar
+7f400ad92000-7f400ad94000 r-xs 00004000 08:13 29759657                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/mydoggy-res.jar
+7f400ad95000-7f400ad97000 r-xs 00007000 08:13 29759672                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/mydoggy-api.jar
+7f400ad9a000-7f400adaa000 r-xs 000a4000 08:13 29759540                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/mydoggy-plaf.jar
+7f400adae000-7f400adb0000 r-xs 00010000 08:13 29759520                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/miglayout15-swing.jar
+7f400adb0000-7f400adba000 r-xs 00052000 08:13 29759278                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.ui.jar
+7f400adba000-7f400adc3000 r-xs 00054000 08:13 29759531                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar
+7f400adc8000-7f400adcc000 r-xs 00022000 08:13 29759554                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/binding-2.0.6.jar
+7f400add2000-7f400add9000 r-xs 00094000 08:13 29759563                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar
+7f400addf000-7f400ade2000 r-xs 00011000 08:13 29759518                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/basicmodel.jar
+7f400ade5000-7f400ade6000 r-xs 00007000 08:13 29759658                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/asm-commons-3.1.jar
+7f400ade8000-7f400ade9000 r-xs 0000a000 08:13 29759659                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/asm-3.1.jar
+7f400adf0000-7f400adf4000 r-xs 0004a000 08:13 29759515                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/appframework-1.03.jar
+7f400adf8000-7f400adf9000 r-xs 00002000 08:13 29759680                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/TableLayout.jar
+7f400adff000-7f400ae01000 r-xs 00009000 08:13 29759677                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/commons-pool.jar
+7f400ae06000-7f400ae08000 r-xs 00008000 08:13 29759638                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/commons-logging.jar
+7f400ae0d000-7f400ae10000 r-xs 0001f000 08:13 29759517                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/commons-beanutils.jar
+7f400ae12000-7f400ae1f000 r-xs 0007c000 08:13 29759580                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/commons-collections.jar
+7f400ae26000-7f400ae2d000 r-xp 00000000 08:13 28314777                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f400ae2d000-7f400af2e000 ---p 00007000 08:13 28314777                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f400af2e000-7f400af30000 rwxp 00008000 08:13 28314777                   /home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f400af36000-7f400af39000 r-xs 00018000 08:13 29759574                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/commons-digester.jar
+7f400af3c000-7f400af40000 r-xs 00036000 08:13 29759589                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/QuickServer.jar
+7f400af43000-7f400af44000 r-xs 0000d000 08:13 29759571                   /home/letrend/altera/14.0/quartus/sopc_builder/model/lib/Nlview.jar
+7f400af45000-7f400af6e000 rwxp 00000000 00:00 0 
+7f400af6e000-7f400af76000 rwxs 00000000 08:05 918193                     /tmp/hsperfdata_letrend/3592
+7f400af76000-7f400af7d000 r-xs 00000000 08:05 1716688                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f400af7f000-7f400af80000 rwxp 00000000 00:00 0 
+7f400af80000-7f400af81000 r-xp 00000000 00:00 0 
+7f400af81000-7f400af83000 rwxp 00000000 00:00 0 
+7f400af83000-7f400af84000 r-xp 00025000 08:05 525672                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f400af84000-7f400af85000 rwxp 00026000 08:05 525672                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f400af85000-7f400af87000 rwxp 00000000 00:00 0 
+7f400af87000-7f400af8a000 rwxp 00000000 00:00 0 
+7ffc121d5000-7ffc121fa000 rwxp 00000000 00:00 0                          [stack]
+7ffc121fe000-7ffc12200000 r--p 00000000 00:00 0                          [vvar]
+7ffc12200000-7ffc12202000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: com.altera.ipedit.QsysEditorApp --project-dir=/home/letrend/workspace/roboy_powerlink_fpga/fpga-rtl/ --system-info=DEVICE_FAMILY=Cyclone V --system-info=DEVICE=5CSEMA4U23C6 --system-info=DEVICE_SPEEDGRADE=6 --host-controller
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/letrend/altera/14.0/quartus/linux64:/home/letrend/altera/14.0/quartus/adm:/home/letrend/altera/14.0/quartus/linux64:/opt/ros/kinetic/bin:/home/letrend/bin:/home/letrend/.local/bin:/home/letrend/altera/16.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin:/home/letrend/altera/16.1/nios2eds/sdk2/bin:/home/letrend/altera/16.1/nios2eds/bin:/home/letrend/altera/16.1/modelsim_ase/linuxaloem:/home/letrend/altera/16.1/quartus/bin:/home/letrend/altera/16.1/quartus/sopc_builder/bin:/home/letrend/bin:/home/letrend/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/letrend/.arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/bin:/home/letrend/.arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/bin:/snap/bin:/home/letrend/.arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/bin:/home/letrend/.arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/bin
+LD_LIBRARY_PATH=/home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64/server:/home/letrend/altera/14.0/quartus/linux64/jre64/lib/amd64:/home/letrend/altera/14.0/quartus/linux64/jre64/../lib/amd64:/home/letrend/altera/14.0/quartus/linux64:/home/letrend/altera/14.0/quartus/linux64:/opt/ros/kinetic/lib
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x76a860], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x76a860], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x621870], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00001000, sa_flags=0x10000000
+SIGXFSZ: [libjvm.so+0x621870], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x621870], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x624450], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x624050], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x624050], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x624050], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x624050], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:stretch/sid
+
+uname:Linux 4.4.0-79-generic #100-Ubuntu SMP Wed May 17 19:58:14 UTC 2017 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 10240k, CORE 0k, NPROC 59464, NOFILE 65536, AS infinity
+load average:0.20 0.57 0.75
+
+/proc/meminfo:
+MemTotal:       15331628 kB
+MemFree:          532924 kB
+MemAvailable:    5526936 kB
+Buffers:          760632 kB
+Cached:          4726944 kB
+SwapCached:         1420 kB
+Active:          9977608 kB
+Inactive:        3890416 kB
+Active(anon):    7464492 kB
+Inactive(anon):  1635732 kB
+Active(file):    2513116 kB
+Inactive(file):  2254684 kB
+Unevictable:         132 kB
+Mlocked:             132 kB
+SwapTotal:      19176444 kB
+SwapFree:       19135684 kB
+Dirty:               176 kB
+Writeback:             0 kB
+AnonPages:       8379344 kB
+Mapped:          1432852 kB
+Shmem:            719680 kB
+Slab:             627216 kB
+SReclaimable:     563512 kB
+SUnreclaim:        63704 kB
+KernelStack:       16912 kB
+PageTables:       100436 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    26842256 kB
+Committed_AS:   19860364 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   4251648 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      385872 kB
+DirectMap2M:    14225408 kB
+DirectMap1G:     1048576 kB
+
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 21 model 48 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, mmxext, lzcnt, sse4a
+
+Memory: 4k page, physical 15331628k(532924k free), swap 19176444k(19135684k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (19.0-b09) for linux-amd64 JRE (1.6.0_23-b05), built on Nov 12 2010 14:12:21 by "java_re" with gcc 3.2.2 (SuSE Linux)
+
+time: Fri Jun 23 22:49:53 2017
+elapsed time: 1952 seconds
+
